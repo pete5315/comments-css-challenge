@@ -1,108 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <!-- Fonts from google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>CSS Challenge | Interactive comments section</title>
+    <!-- Fonts from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>CSS Challenge | Interactive comments section</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
+
 <body>
     <!-- Comment #1 -->
-    <div class="comment horizontal-container" id="comment1">
-      <container class="like">
-        <img src="images/icon-plus.svg" />
-        <likes>12</likes>
-        <img src="images/icon-minus.svg" />
-      </container>
-      <img src="./images/avatars/image-amyrobson.png" alt="profile" class="portrait"/>
-      <author>amyrobson</author>
-      <date>1 month ago</date>
-      <img src="images/icon-reply.svg" />
-      <span>Reply</span>
+    <div class="comment-container">
+        <span class="like">
+            <img src="images/icon-plus.svg" class="plus" />
+            <div class="likes">12</div>
+            <img src="images/icon-minus.svg" class="minus" />
+        </span>
+        <span>
+            <div class="comment horizontal-container" id="comment1">
+                <img src="./images/avatars/image-amyrobson.png" alt="profile" class="portrait" />
+                <p class="author">amyrobson</p>
+                <p class="date">1 month ago</p>
+                <p class="emptyspace"></p>
+                <span class="replysection">
+                    <img src="images/icon-reply.svg" class="replyimage"/>
+                    <span class="replytext">Reply</span>
+                </span>
+            </div>
+            <comment>Impressive! Though it seems the drag feature could be improved. But
+            overall it looks incredible. You've nailed the design and the
+            responsiveness at various breakpoints works really well.</comment>
+        </span>
     </div>
-    <comment
-      >Impressive! Though it seems the drag feature could be improved. But
-      overall it looks incredible. You've nailed the design and the
-      responsiveness at various breakpoints works really well.</comment
-    >
     <!-- Comment #2 -->
-    <div class="comment horizontal-container" id="comment2">
-      <container class="like">
-        <img src="images/icon-plus.svg" />
-        <likes>5</likes>
-        <img src="images/icon-minus.svg" />
-      </container>
-      <img src="./images/avatars/image-maxblagun.png" alt="profile" class="portrait"/>
-      <author>maxblagun</author>
-      <date>2 weeks ago</date>
-      <img src="images/icon-reply.svg" />
-      <span>Reply</span>
-    </div>
-    <comment
-      >Woah, your project looks awesome! How long have you been coding for? I'm
-      still new, but think I want to dive into React as well soon. Perhaps you
-      can give me an insight on where I can learn React? Thanks!</comment
-    >
-    <!-- Comment #3 (Reply to comment #2) -->
-    <div id="comment3" class="comment horizontal-container reply2">
-      <span>
-        <container class="like">
-          <img src="images/icon-plus.svg" />
-          <likes>4</likes>
-          <img src="images/icon-minus.svg" />
-        </container>
-      </span>
-      <span><img src="./images/avatars/image-ramsesmiron.png" alt="profile" class="portrait"/></span>
-      <author>ramsesmiron</author>
-      <date>1 week ago</date>
-      <img src="images/icon-reply.svg" />
-      <span>Reply</span>
-    </div>
-    <comment
-      >@maxblagun If you're still new, I'd recommend focusing on the
-      fundamentals of HTML, CSS, and JS before considering React. It's very
-      tempting to jump ahead but lay a solid foundation first.</comment
-    >
-    <!-- Comment #4 (Reply to comment #2) -->
-    <div id="comment4" class="comment horizontal-container reply2">
-      <container class="like">
-        <img src="images/icon-plus.svg" />
-        <likes>2</likes>
-        <img src="images/icon-minus.svg" />
-      </container>
-      <img src="./images/avatars/image-juliusomo.png" alt="profile" class="portrait"/>
-      <author>juliusomo</author>
-      <date>2 days ago</date>
-      <img src="images/icon-reply.svg" />
-      <span>Reply</span>
-    </div>
-    <comment
-      >@ramsesmiron I couldn't agree more with this. Everything moves so fast
-      and it always seems like everyone knows the newest library/framework. But
-      the fundamentals are what stay constant.</comment
-    >
+    <div class="comment-wrapper">
+        <div class="comment-container">
+            <span class="like">
+                <img src="images/icon-plus.svg" class="plus" />
+                <div class="likes">5</div>
+                <img src="images/icon-minus.svg" class="minus" />
+            </span>
+            <span>
+                <div class="comment horizontal-container" id="comment2">
+                    <img src="./images/avatars/image-maxblagun.png" alt="profile" class="portrait" />
+                    <p class="author">maxblagun</p>
+                    <p class="date">2 weeks ago</p>
+                    <p class="emptyspace"></p>
+                    <span class="replysection">
+                        <img src="images/icon-reply.svg" />
+                        <span>Reply</span>
+                    </span>
+                </div>
+                <comment>Woah, your project looks awesome! How long have you been coding for? I'm
+                still new, but think I want to dive into React as well soon. Perhaps you
+                can give me an insight on where I can learn React? Thanks!</comment>
+            </span>
+        </div>
+        <span class="replies-external">
+            <span class="vertical-line">|</span>
+            <span class="replies-internal">
+                <!-- Comment #3 (Reply to comment #2) -->
+                <div class="comment-container reply2">
+                    <span class="like">
+                        <img src="images/icon-plus.svg" class="plus" />
+                        <div class="likes">4</div>
+                        <img src="images/icon-minus.svg" class="minus" />
+                    </span>
+                    <span>
+                        <div id="comment3" class="comment horizontal-container">
+                            <span><img src="./images/avatars/image-ramsesmiron.png" alt="profile" class="portrait" /></span>
+                            <p class="author">ramsesmiron</p>
+                            <p class="date">1 week ago</p>
+                            <p class="emptyspace"></p>
+                            <span class="replysection">
+                                <img src="images/icon-reply.svg" />
+                                <span>Reply</span>
+                            </span>
 
-    <div class="attribution">
-      Challenge adapted from
-      <a
-        href="https://www.frontendmentor.io/challenges/interactive-comments-section-iG1RugEG9"
-        target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+                        </div>
+                        <comment>@maxblagun If you're still new, I'd recommend focusing on the
+                        fundamentals of HTML, CSS, and JS before considering React. It's very
+                        tempting to jump ahead but lay a solid foundation first.</comment>
+                    </span>
+                </div>
+                <!-- Comment #4 (Reply to comment #2) -->
+                <div class="comment-container reply2">
+                    <span class="like">
+                        <img src="images/icon-plus.svg" class="plus" />
+                        <div class="likes">2</div>
+                        <img src="images/icon-minus.svg" class="minus" />
+                    </span>
+                    <span>
+                        <div id="comment4" class="comment horizontal-container">
+                        <img src="./images/avatars/image-juliusomo.png" alt="profile" class="portrait" />
+                        <p class="author">juliusomo</p>
+                        <p class="identifier">you</p>
+                        <p class="date">2 days ago</p>
+                        <p class="emptyspace2"></p>
+                        <span class="delete-section">
+                            <img src="images/icon-delete.svg" />
+                            <span>Delete</span>
+                        </span>
+                        <span class="edit-section">
+                            <img src="images/icon-edit.svg" />
+                            <span>Edit</span>
+                        </span>
+                        </div>
+                        <comment>@ramsesmiron I couldn't agree more with this. Everything moves so fast
+                        and it always seems like everyone knows the newest library/framework. But
+                        the fundamentals are what stay constant.</comment>
+                    </span>
+                </div>
+            </span>
+        </span>
     </div>
-  </body>
+    <div class="add-comment">
+        <form class="add-comment">
+            <img src="./images/avatars/image-juliusomo.png" alt="profile" class="portrait reply" />
+            <textarea type="textarea" placeholder="Add a comment." class="form-input"></textarea>
+            <button class="button">SEND</button>
+        </form>
+        
+    </div>
+    <div class="attribution">
+        Challenge adapted from
+        <a href="https://www.frontendmentor.io/challenges/interactive-comments-section-iG1RugEG9" target="_blank">Frontend
+        Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+    </div>
+</body>
+
 </html>
