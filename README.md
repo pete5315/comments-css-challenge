@@ -1,3 +1,5 @@
+Weekend assignment to practice CSS styling. Basically was an attempt to recreate a wireframe.
+
 # Comments Section CSS Challenge
 
 Your challenge is to build out this comments section in HTML and CSS and get it looking as close to the design as possible:
